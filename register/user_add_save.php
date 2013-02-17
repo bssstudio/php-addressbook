@@ -63,15 +63,16 @@ die();
 $encrypted_pw = md5($pw_clean);
 $query = "INSERT INTO ".$usertable."
 (domain_id, username, md5_pass, lastname, firstname, email, phone, password_hint) 
-
-     select 0 domain_id
-     , '".mysql_real_escape_string($username)."'      username     
-     , '".mysql_real_escape_string($encrypted_pw)."'  md5_pass
-     , '".mysql_real_escape_string($lastname)."'      lastname
-     , '".mysql_real_escape_string($firstname)."'     firstname
-     , '".mysql_real_escape_string($email)."'         email
-     , '".mysql_real_escape_string($phone)."'         phone  
-     , '".mysql_real_escape_string($password_hint)."' password_hint from ".$usertable.";";
+VALUES(
+      0, 
+     '".mysql_real_escape_string($username)."', 
+     '".mysql_real_escape_string($encrypted_pw)."',
+     '".mysql_real_escape_string($lastname)."',
+     '".mysql_real_escape_string($firstname)."',
+     '".mysql_real_escape_string($email)."',
+     '".mysql_real_escape_string($phone)."',
+     '".mysql_real_escape_string($password_hint)."'
+);";
      
 // save the info to the database
 $results = mysql_query( $query );
