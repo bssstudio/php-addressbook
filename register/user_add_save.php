@@ -7,8 +7,12 @@ $firstname     = "";
 $phone         = "";
 $password_hint = "";
 
+//phone
+$phone = preg_replace("/[^a-zA-Z0-9]/", "", $_POST['extension']); // extension for asterisk integration
+
+
 // User unique ?
-$username = strip_tags(substr($_POST['email'],0,32));
+$username = strip_tags(substr($_POST['username'],0,32));
 if(trim($username)!=='' || strlen(trim($username)) >= 4){
    //email unique?
    $sql    = "SELECT * FROM ".$usertable." WHERE username='$username'";
