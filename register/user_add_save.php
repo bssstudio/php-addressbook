@@ -63,7 +63,7 @@ die();
 $encrypted_pw = md5($pw_clean);
 $query = "INSERT INTO ".$usertable."
 (domain_id, username, md5_pass, lastname, firstname, email, phone, password_hint) 
-      0,
+     select 0 domain_id
      , '".mysql_real_escape_string($username)."'      username     
      , '".mysql_real_escape_string($encrypted_pw)."'  md5_pass
      , '".mysql_real_escape_string($lastname)."'      lastname
