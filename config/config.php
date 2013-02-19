@@ -61,4 +61,7 @@
   // Asterisk integration
   $asterisk_integration = true;
   
+  // Google maps enable/disable
+  $google_maps_enabled = true;
+  
 ?>
