@@ -23,6 +23,8 @@ if ($_SERVER['SERVER_NAME'] == "php-addressbook.sourceforge.net") { ?>
 	<div id="footer">
 <?php } ?>
 
+<!-- 
+
 <?php
 
 	// Add some function only active on the 
@@ -40,7 +42,7 @@ if($_SERVER['SERVER_NAME'] == "php-addressbook.sourceforge.net") { ?>
 	</div>
 </div>
 	</body>
-
+-->
 <!-- 
 Copyright Notice:
 This script was written by Rob Minto, and is free to use and distribute under GPL. 
